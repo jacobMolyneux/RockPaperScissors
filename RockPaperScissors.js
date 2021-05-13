@@ -76,6 +76,7 @@ function playRound(PlayerSelection, computerPlay){
 
 // event listeners that determine the users choice and lets game run on choice
 let rock = document.getElementById('rock');
+
 let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
 
