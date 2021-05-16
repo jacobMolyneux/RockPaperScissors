@@ -16,7 +16,7 @@ body{
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    background-color:white;
+    background-color:blue;
 }
 .choice:hover{
     background-color: grey;
@@ -27,6 +27,39 @@ body{
     display:flex;
     
 }
+#RockIcon{
+    width:200px;
+    height:200px;
+    border-radius: 100%;
 
+}
+#paperIcon{
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+
+}
+#scissorsIcon{
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+
+}
+#ScoreCounter{
+    display:flex;
+    font-size: 100px;
+    padding: 10px;
+    
+    
+}
+#userScore{
+    padding: 10px;
+    border: 1px solid white;
+
+}
+#computerScore{
+    padding:10px;
+    border: 1px solid white;
+}
 
 

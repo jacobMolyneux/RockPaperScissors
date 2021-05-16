@@ -8,6 +8,10 @@ const container = document.getElementById('playerContainer');
 const computer = document.getElementById('computer');
 const computerSelection = document.createElement('div');
 computer.appendChild(computerSelection);
+const scoreContainer = document.getElementById('ScoreCounter');
+const playerScoreDisplay = document.getElementById('userScore');
+const computerScoreDisplay = document.getElementById('computerScore');
+
 
 
 
@@ -46,29 +50,43 @@ function playRound(PlayerSelection, computerPlay){
     if(player == 'rock' && computerChoice == 'scissors'){
         console.log('You Win!');
         playerScore++;
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     else if(player == 'rock' && computerChoice == 'paper'){
         console.log('You Lose!');
         computerScore++;
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     else if(player == 'paper' && computerChoice == 'rock'){
         console.log("You Win!");
         playerScore++;
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     else if(player == 'paper' && computerChoice == 'scissors'){
         console.log('You Lose!');
         computerScore++;
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     else if(player == 'scissors' && computerChoice == 'rock'){
         console.log('You Lose!');
         computerScore++;
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     else if(player == 'scissors' && computerChoice == 'paper'){
         console.log('You Win!');
         playerScore++;
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     else if(player == computerChoice){
         console.log("Its a Tie!");
+        playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+        computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
     }
     
 }
@@ -123,6 +141,8 @@ bigContainer.style.flexDirection = 'row';
 bigContainer.style.justifyContent = 'space-between';
 bigContainer.style.alignItems = 'baseline';
 computer.style.margin = '100px';
+playerScoreDisplay.style.color = "white";
+computerScoreDisplay.style.color = "white";
 
 // player score icon stylings
 // score.style.color = 'white';
