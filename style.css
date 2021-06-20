@@ -1,65 +1,74 @@
-body{
-    background-color: black;
-
+body {
+  background-color: white;
 }
-#container{
-    display: flex;
-    width:100%;
-    height:100%;
-    position: relative;
-    top:400px;
-
+#container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.choice{
-    border:1px solid;
-    margin: 10px; 
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-color:blue;
+.choice {
+  border: 1px solid;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: blue;
 }
-.choice:hover{
-    background-color: grey;
+.choiceIcon:hover {
+  width: 250px;
 }
-#scores{
-    font-size:40;
-    color: white;
-    display:flex;
-    
-}
-#RockIcon{
-    width:200px;
-    height:200px;
-    border-radius: 100%;
-
-}
-#paperIcon{
-    width:200px;
-    height:200px;
-    border-radius: 100%;
-
-}
-#scissorsIcon{
-    width:200px;
-    height:200px;
-    border-radius: 100%;
-
-}
-#ScoreCounter{
-    display:flex;
-    font-size: 100px;
-    padding: 10px;
-    
-    
-}
-#userScore{
-    padding: 10px;
-    border: 1px solid white;
-
-}
-#computerScore{
-    padding:10px;
-    border: 1px solid white;
+#scores {
+  font-size: 40;
+  color: black;
+  display: flex;
 }
 
-
+#ScoreCounter {
+  display: flex;
+  font-size: 100px;
+  padding: 10px;
+}
+#userScore {
+  padding: 10px;
+  border: 1px solid black;
+}
+#computerScore {
+  padding: 10px;
+  border: 1px solid black;
+}
+.choiceIcon {
+  width: 200px;
+  border-radius: 100%;
+  background: white;
+}
+#player {
+  display: flex;
+  flex-direction: column;
+}
+#choiceDiv {
+  color: black;
+  font-size: 100px;
+  position: relative;
+  margin: 100px;
+}
+#playerContainer {
+  display: flex;
+  flex-direction: column;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+#options {
+  display: flex;
+}
+#computerSelection {
+  color: red;
+  font-size: 100px;
+}
+#computer {
+  margin: 100px;
+}
