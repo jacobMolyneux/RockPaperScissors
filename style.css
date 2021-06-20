@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  font-family: helvetica;
 }
 #container {
   display: flex;
@@ -16,7 +17,7 @@ body {
   background-color: blue;
 }
 .choiceIcon:hover {
-  width: 250px;
+  animation: rotation 1s;
 }
 #scores {
   font-size: 40;
@@ -28,6 +29,8 @@ body {
   display: flex;
   font-size: 100px;
   padding: 10px;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 2px;
 }
 #userScore {
   padding: 10px;
@@ -71,4 +74,13 @@ body {
 }
 #computer {
   margin: 100px;
+}
+/* Animations */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
