@@ -17,17 +17,32 @@ const playerScoreDisplay = document.getElementById("userScore");
 const computerScoreDisplay = document.getElementById("computerScore");
 
 // function for computer to choose its option randomly
+const addImagePlayer = (parentNode, imagepath) => {
+  const imageHolder = document.createElement("img");
+  imageHolder.setAttribute("id", "chosenImage");
+  imageHolder.src = imagepath;
+  parentNode.appendChild(imageHolder);
+};
+const addImageComp = (parentNode, imagepath) => {
+  const imageHolder = document.createElement("img");
+  imageHolder.setAttribute("id", "chosenImage");
+  imageHolder.src = imagepath;
+  parentNode.appendChild(imageHolder);
+};
 function computerPlay() {
   i = Math.random();
 
   if (i <= 0.33) {
     computerSelection.textContent = "Rock!";
+    addImageComp(computerSelection, "./Pictures/RockIcon.png");
     return "rock";
   } else if (i > 0.33 && i <= 0.66) {
     computerSelection.textContent = "Paper!";
+    addImageComp(computerSelection, "./Pictures/handIcon.png");
     return "paper";
   } else {
     computerSelection.textContent = "Scissors!";
+    addImageComp(computerSelection, "./Pictures/ScissorsIcon.png");
     return "scissors";
   }
 }
@@ -88,6 +103,7 @@ function rockClicked() {
   let PlayerSelection = "rock";
   choice.textContent = "Rock!";
   console.log("You chose " + PlayerSelection);
+  addImagePlayer(choice, "./Pictures/RockIcon.png");
 
   computerPlay();
   playRound(PlayerSelection, computerPlay());
@@ -96,6 +112,7 @@ paper.addEventListener("click", paperClicked);
 function paperClicked() {
   let PlayerSelection = "paper";
   choice.textContent = "Paper!";
+  addImagePlayer(choice, "./Pictures/handIcon.png");
   console.log("You chose " + PlayerSelection);
   computerPlay();
   playRound(PlayerSelection, computerPlay());
@@ -103,10 +120,10 @@ function paperClicked() {
 scissors.addEventListener("click", scissorsClicked);
 function scissorsClicked() {
   let PlayerSelection = "scissors";
+
   choice.textContent = "Scissors!";
+  addImagePlayer(choice, "./Pictures/ScissorsIcon.png");
   console.log("You chose " + PlayerSelection);
   computerPlay();
   playRound(PlayerSelection, computerPlay());
 }
-
-// Styling Elements

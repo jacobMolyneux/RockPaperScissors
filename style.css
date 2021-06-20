@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: rgb(243, 140, 140);
   font-family: helvetica;
 }
 #container {
@@ -35,10 +35,12 @@ body {
 #userScore {
   padding: 10px;
   border: 1px solid black;
+  background: white;
 }
 #computerScore {
   padding: 10px;
   border: 1px solid black;
+  background: white;
 }
 .choiceIcon {
   width: 200px;
@@ -53,11 +55,18 @@ body {
   color: black;
   font-size: 100px;
   position: relative;
-  margin: 100px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 }
 #playerContainer {
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
+  background: white;
+  box-shadow: 3px 3px;
 }
 #container {
   display: flex;
@@ -71,6 +80,9 @@ body {
 #computerSelection {
   color: red;
   font-size: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #computer {
   margin: 100px;
@@ -83,4 +95,7 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+#chosenImage {
+  width: 150px;
 }
