@@ -1,6 +1,6 @@
 body {
   background-color: rgb(243, 140, 140);
-  font-family: helvetica;
+  font-family: Marker Felt, fantasy;
 }
 #container {
   display: flex;
@@ -78,7 +78,7 @@ body {
   display: flex;
 }
 #computerSelection {
-  color: red;
+  color: rgb(243, 140, 140);
   font-size: 100px;
   display: flex;
   flex-direction: column;
@@ -86,7 +86,14 @@ body {
 }
 #computer {
   margin: 100px;
+  background: white;
+  width: 550px;
+  height: 500px;
+  align-items: center;
+  border: 1px solid black;
+  box-shadow: 3px 3px;
 }
+
 /* Animations */
 @keyframes rotation {
   from {
@@ -98,4 +105,6 @@ body {
 }
 #chosenImage {
   width: 150px;
+  border-radius: 100%;
+  object-fit: cover;
 }
